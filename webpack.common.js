@@ -3,6 +3,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+const htmlWebpackPluginConfig = {
+  meta: {
+    viewport:
+      'width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0',
+    'theme-color': '#4285f4',
+  },
+  templateParameters: {
+    brandName: 'Story App',
+  },
+};
+
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/js/index.js'),
@@ -40,8 +51,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      title: 'Dashboard',
       filename: 'index.html',
-      template: path.resolve(__dirname, 'src/views/index.html'),
+      template: path.resolve(__dirname, 'src/views/dashboard.html'),
+      ...htmlWebpackPluginConfig,
     }),
 
     new CopyWebpackPlugin({
