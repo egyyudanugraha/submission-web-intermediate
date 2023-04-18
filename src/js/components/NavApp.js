@@ -7,6 +7,10 @@ class NavApp extends LitWithoutShadowDom {
       type: String,
       reflect: true,
     },
+    addButton: {
+      type: Boolean,
+      reflect: true,
+    },
   };
   constructor() {
     super();
@@ -23,8 +27,13 @@ class NavApp extends LitWithoutShadowDom {
     return html`
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-          <a class="navbar-brand" href="#">${this.brandName}</a>
-          <button class="btn btn-sm btn-outline-primary" type="button">Tambah story</button>
+          <a class="navbar-brand" href="/">${this.brandName}</a>
+          <a
+            class="btn btn-sm btn-outline-primary ${this.addButton ? 'visible' : 'invisible'}"
+            href="add.html"
+          >
+            Tambah story
+          </a>
         </div>
       </nav>
     `;

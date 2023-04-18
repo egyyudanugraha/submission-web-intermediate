@@ -13,7 +13,8 @@
 @import '~bootstrap/scss/variables';
 
 // Menerapkan/override variables Bootstrap apa pun di sini
-
+$placeholder-opacity-max: 0.5;
+$placeholder-opacity-min: 0.2;
 //
 // Konfigurasi Bootstrap
 //
@@ -44,6 +45,7 @@
 @import '~bootstrap/scss/navbar'; // Requires nav
 @import '~bootstrap/scss/card';
 @import '~bootstrap/scss/modal';
+@import '~bootstrap/scss/placeholders';
 
 //
 // Utilities API untuk menghasilkan utility classes

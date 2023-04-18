@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title><%= htmlWebpackPlugin.options.title %> | Story App</title>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      <nav-app brandName="<%= brandName %>"></nav-app>
+    </header>
+
+    <main class="flex-grow-1">
+      <div class="main-content">
+        <div class="container py-5">
+          <h1 class="mb-3"><%= htmlWebpackPlugin.options.title %></h1>
+          <form id="addStoryForm" class="row row-cols-1 row-cols-sm-2" novalidate>
+            <div class="col">
+              <input-image-preview
+                inputId="inputPhoto"
+                invalidFeedbackMessage="Wajib diisi dan berupa gambar"
+                required
+              ></input-image-preview>
+            </div>
+            <div class="col mt-3">
+              <textarea-validate
+                inputId="inputDescription"
+                invalidFeedbackMessage="Wajib diisi"
+                for="Deskripsi story"
+                required
+              ></textarea-validate>
+              <button class="btn btn-primary w-100 mt-3" type="submit">Add Story</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <foot-app></foot-app>
+    </footer>
+  </body>
+</html>

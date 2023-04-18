@@ -1,5 +1,6 @@
 const Dashboard = {
   async init() {
+    this._cardPreloader(4);
     await this._initialData();
   },
 
@@ -37,6 +38,20 @@ const Dashboard = {
       .join('');
 
     document.querySelector('#stories').innerHTML = listStories;
+  },
+
+  _cardPreloader(manyCard) {
+    let placeholderCards = '';
+
+    for (let i = 0; i < manyCard; i++) {
+      placeholderCards += `
+      <div class="col my-2">
+        <card-story placeholder></card-story>
+      </div>
+      `;
+    }
+
+    document.querySelector('#stories').innerHTML = placeholderCards;
   },
 };
 
