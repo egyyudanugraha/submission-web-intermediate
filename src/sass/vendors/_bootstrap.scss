@@ -2,6 +2,11 @@
 // Bootstrap
 // ==================================================
 
+// Using built-in modules
+@use 'sass:map';
+// Custom modules
+@use '../vendors-extensions/bootstrap/variables/themecolor' as theme;
+
 //
 // Functions Bootstrap
 //
@@ -13,9 +18,7 @@
 @import '~bootstrap/scss/variables';
 
 // Menerapkan/override variables Bootstrap apa pun di sini
-$placeholder-opacity-max: 0.5;
-$placeholder-opacity-min: 0.2;
-//
+$theme-colors: map.deep-merge($theme-colors, theme.$theme-colors);
 // Konfigurasi Bootstrap
 //
 @import '~bootstrap/scss/maps';

@@ -61,7 +61,9 @@ class CardStory extends LitWithoutShadowDom {
               <span class="placeholder col-6"></span>
               <span class="placeholder col-8"></span>
             </p>
-            <span class="placeholder col-2"></span>
+            <div class="placeholder-glow">
+              <span class="placeholder col-2"></span>
+            </div>
           </div>
         </div>
       `;

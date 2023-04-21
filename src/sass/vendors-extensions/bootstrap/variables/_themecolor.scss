@@ -1,0 +1,7 @@
+@use 'colors';
+
+$theme-colors: (
+  'darkblue': colors.$darkblue,
+  'lightblue': colors.$lightblue,
+  'custombase': colors.$custombase,
+);

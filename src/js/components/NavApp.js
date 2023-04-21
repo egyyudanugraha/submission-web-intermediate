@@ -29,7 +29,7 @@ class NavApp extends LitWithoutShadowDom {
         <div class="container">
           <a class="navbar-brand" href="/">${this.brandName}</a>
           <a
-            class="btn btn-sm btn-outline-primary ${this.addButton ? 'visible' : 'invisible'}"
+            class="btn btn-sm btn-outline-darkblue ${this.addButton ? 'visible' : 'invisible'}"
             href="add.html"
           >
             Tambah story

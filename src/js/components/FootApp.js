@@ -8,7 +8,7 @@ class FootApp extends LitWithoutShadowDom {
 
   render() {
     return html`
-      <div class="main-footer bg-dark">
+      <div class="main-footer bg-darkblue">
         <div
           class="container px-3 py-3 text-white fs-6 d-flex justify-content-between align-items-center align-content-center"
         >
