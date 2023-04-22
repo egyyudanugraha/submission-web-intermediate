@@ -8,6 +8,7 @@
 @use '../vendors-extensions/bootstrap/variables/themecolor' as theme;
 @use '../vendors-extensions/bootstrap/variables/buttons' as custombtn;
 @use '../vendors-extensions/bootstrap/variables/switch' as customswitch;
+@use '../vendors-extensions/bootstrap/variables/shadows' as customshadow;
 
 //
 // Functions Bootstrap
@@ -23,13 +24,18 @@
 $theme-colors: map.deep-merge($theme-colors, theme.$theme-colors);
 
 // Custom Button =========================
-
 $btn-border-radius: custombtn.$border-radius;
 $btn-border-radius-sm: custombtn.$border-radius;
 $btn-border-radius-lg: custombtn.$border-radius;
 
-// Custom Switch
+// Custom Switch =========================
 $form-check-input-checked-bg-color: customswitch.$form-input-bg-active;
+
+// Custom Shadow =========================
+$box-shadow: 0 0rem 1rem rgba(customshadow.$shadow-darkblue, 0.2);
+$box-shadow-sm: 0 0.125rem 0.25rem rgba(customshadow.$shadow-darkblue, 0.15);
+$box-shadow-lg: 0 1rem 3rem rgba(customshadow.$shadow-darkblue, 0.3);
+$box-shadow-inset: inset 0 1px 2px rgba(customshadow.$shadow-darkblue, 0.075);
 
 // Konfigurasi Bootstrap
 //
@@ -61,7 +67,6 @@ $form-check-input-checked-bg-color: customswitch.$form-input-bg-active;
 @import '~bootstrap/scss/card';
 @import '~bootstrap/scss/modal';
 @import '~bootstrap/scss/placeholders';
-@import '~bootstrap/scss/badge';
 
 //
 // Utilities API untuk menghasilkan utility classes

@@ -70,7 +70,7 @@ class CardStory extends LitWithoutShadowDom {
     }
 
     return html`
-      <div class="card">
+      <div class="card shadow">
         <img src="${this.image}" class="card-img-top skeleton-img" />
         <div class="card-body">
           <h5 class="card-title">${this.name}</h5>

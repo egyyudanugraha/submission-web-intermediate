@@ -1,6 +1,7 @@
 import './NavApp';
 import './CardStory';
-import './DateFormat';
+import './shadow/DateFormat';
+import './shadow/BadgeRounded';
 import './FootApp';
 import './locale-picker';
 import './ButtonStory';

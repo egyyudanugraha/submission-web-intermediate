@@ -1,8 +1,7 @@
-import { html } from 'lit';
-import LitWithoutShadowDom from './base/LitWithoutShadowDom';
+import { html, LitElement } from 'lit';
 import { updateWhenLocaleChanges, msg } from '@lit/localize';
 
-class DateFormat extends LitWithoutShadowDom {
+class DateFormat extends LitElement {
   static properties = {
     posted: {
       type: String,
@@ -16,9 +15,7 @@ class DateFormat extends LitWithoutShadowDom {
   }
 
   render() {
-    return html`
-      <span class="badge rounded-pill text-bg-secondary">${this._postedAt(this.posted)}</span>
-    `;
+    return html` <badge-rounded primary>${this._postedAt(this.posted)}</badge-rounded> `;
   }
 
   _postedAt(date) {

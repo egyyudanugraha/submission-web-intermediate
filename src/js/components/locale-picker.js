@@ -1,6 +1,6 @@
 import LitWithoutShadowDom from './base/LitWithoutShadowDom';
 import { updateWhenLocaleChanges } from '@lit/localize';
-import { getLocale, localeShortNames, setLocaleFromUrl } from './../localization.js';
+import { localeShortNames, setLocaleFromUrl } from './../localization.js';
 import { html } from 'lit';
 
 class LocalePicker extends LitWithoutShadowDom {
@@ -20,11 +20,8 @@ class LocalePicker extends LitWithoutShadowDom {
           ?checked=${this._getLocaleRenderDOM()[0]}
           @change=${this._changeLocale}
         />
-        <span
-          class="badge rounded-pill ${this._getLocaleRenderDOM()[0]
-            ? 'text-bg-darkblue'
-            : 'text-bg-secondary'}"
-          >${localeShortNames[this._getLocaleRenderDOM()[1]]}</span
+        <badge-rounded ?primary=${this._getLocaleRenderDOM()[0]}
+          >${localeShortNames[this._getLocaleRenderDOM()[1]]}</badge-rounded
         >
       </div>
     `;
