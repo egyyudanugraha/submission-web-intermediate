@@ -1,0 +1,20 @@
+@use 'variables' as v;
+@use 'cardimage' as img;
+
+@mixin skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeleton-img {
+  @include skeleton;
+  @include img.image-card;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: v.$bg-color-skeleton-0;
+  }
+  100% {
+    background-color: v.$bg-color-skeleton-100;
+  }
+}

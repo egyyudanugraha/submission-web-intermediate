@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file target-language="id" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="s5f710b847fce3d59">
+  <source>Add story</source>
+  <target>Tambah cerita</target>
+</trans-unit>
+<trans-unit id="s18c61ee29243b363">
+  <source>days ago</source>
+  <target>hari yang lalu</target>
+</trans-unit>
+<trans-unit id="sffad8314c7d71c3d">
+  <source>hours ago</source>
+  <target>jam yang lalu</target>
+</trans-unit>
+<trans-unit id="s4c0be30854a3beb7">
+  <source>minutes ago</source>
+  <target>menit yang lalu</target>
+</trans-unit>
+<trans-unit id="sbcd76e32508a79e0">
+  <source>second ago</source>
+  <target>detik yang lalu</target>
+</trans-unit>
+<trans-unit id="s84126fa92f00b4ef">
+  <source>just now</source>
+  <target>baru saja</target>
+</trans-unit>
+<trans-unit id="s11f6abf2fdde27ad">
+  <source>Build with</source>
+  <target>Dibuat dengan</target>
+</trans-unit>
+<trans-unit id="s08a64b07b54df8d4">
+  <source>by</source>
+  <target>oleh</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

@@ -6,6 +6,8 @@
 @use 'sass:map';
 // Custom modules
 @use '../vendors-extensions/bootstrap/variables/themecolor' as theme;
+@use '../vendors-extensions/bootstrap/variables/buttons' as custombtn;
+@use '../vendors-extensions/bootstrap/variables/switch' as customswitch;
 
 //
 // Functions Bootstrap
@@ -19,6 +21,16 @@
 
 // Menerapkan/override variables Bootstrap apa pun di sini
 $theme-colors: map.deep-merge($theme-colors, theme.$theme-colors);
+
+// Custom Button =========================
+
+$btn-border-radius: custombtn.$border-radius;
+$btn-border-radius-sm: custombtn.$border-radius;
+$btn-border-radius-lg: custombtn.$border-radius;
+
+// Custom Switch
+$form-check-input-checked-bg-color: customswitch.$form-input-bg-active;
+
 // Konfigurasi Bootstrap
 //
 @import '~bootstrap/scss/maps';
@@ -49,6 +61,7 @@ $theme-colors: map.deep-merge($theme-colors, theme.$theme-colors);
 @import '~bootstrap/scss/card';
 @import '~bootstrap/scss/modal';
 @import '~bootstrap/scss/placeholders';
+@import '~bootstrap/scss/badge';
 
 //
 // Utilities API untuk menghasilkan utility classes

@@ -1,5 +1,6 @@
 import LitWithoutShadowDom from './base/LitWithoutShadowDom';
 import { html } from 'lit';
+import { updateWhenLocaleChanges, msg } from '@lit/localize';
 
 class NavApp extends LitWithoutShadowDom {
   static properties = {
@@ -15,6 +16,8 @@ class NavApp extends LitWithoutShadowDom {
   constructor() {
     super();
     this._checkProperty();
+
+    updateWhenLocaleChanges(this);
   }
 
   _checkProperty() {
@@ -28,12 +31,15 @@ class NavApp extends LitWithoutShadowDom {
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
           <a class="navbar-brand" href="/">${this.brandName}</a>
-          <a
-            class="btn btn-sm btn-outline-darkblue ${this.addButton ? 'visible' : 'invisible'}"
-            href="add.html"
-          >
-            Tambah story
-          </a>
+          <div class="d-flex gap-3 align-items-center">
+            <a
+              class="btn btn-sm btn-outline-darkblue ${this.addButton ? 'visible' : 'invisible'}"
+              href="add.html"
+            >
+              ${msg(`Add story`)}
+            </a>
+            <locale-picker></locale-picker>
+          </div>
         </div>
       </nav>
     `;

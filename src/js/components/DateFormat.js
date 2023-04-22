@@ -1,5 +1,6 @@
 import { html } from 'lit';
 import LitWithoutShadowDom from './base/LitWithoutShadowDom';
+import { updateWhenLocaleChanges, msg } from '@lit/localize';
 
 class DateFormat extends LitWithoutShadowDom {
   static properties = {
@@ -11,10 +12,13 @@ class DateFormat extends LitWithoutShadowDom {
 
   constructor() {
     super();
+    updateWhenLocaleChanges(this);
   }
 
   render() {
-    return html` <span class="text-muted"><small>${this._postedAt(this.posted)}</small></span> `;
+    return html`
+      <span class="badge rounded-pill text-bg-secondary">${this._postedAt(this.posted)}</span>
+    `;
   }
 
   _postedAt(date) {
@@ -27,18 +31,18 @@ class DateFormat extends LitWithoutShadowDom {
     const diffSeconds = Math.floor(diff / 1000);
 
     if (diffDays > 0) {
-      return `${diffDays} days ago`;
+      return `${diffDays} ${msg(`days ago`)}`;
     }
     if (diffHours > 0) {
-      return `${diffHours} hours ago`;
+      return `${diffHours} ${msg(`hours ago`)}`;
     }
     if (diffMinutes > 0) {
-      return `${diffMinutes} minutes ago`;
+      return `${diffMinutes} ${msg(`minutes ago`)}`;
     }
     if (diffSeconds > 0) {
-      return `${diffSeconds} seconds ago`;
+      return `${diffSeconds} ${msg(`second ago`)}`;
     }
-    return 'just now';
+    return msg(`just now`);
   }
 }
 

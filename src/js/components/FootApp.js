@@ -1,9 +1,12 @@
 import { html } from 'lit';
 import LitWithoutShadowDom from './base/LitWithoutShadowDom';
+import { updateWhenLocaleChanges, msg } from '@lit/localize';
 
 class FootApp extends LitWithoutShadowDom {
   constructor() {
     super();
+
+    updateWhenLocaleChanges(this);
   }
 
   render() {
@@ -20,9 +23,11 @@ class FootApp extends LitWithoutShadowDom {
               <i class="bi bi-linkedin"></i>
             </a>
           </div>
-          <small>&copy; Copyright 2023</small>
+          <div>
+            <small>&copy; Copyright 2023</small>
+          </div>
           <small>
-            Build with <i class="bi bi-heart-fill"></i> by
+            ${msg(`Build with`)} <i class="bi bi-heart-fill"></i> ${msg(`by`)}
             <a
               class="link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
               href="https://egyyudanugraha.site/"
