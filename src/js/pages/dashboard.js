@@ -5,7 +5,7 @@ const Dashboard = {
   },
 
   async _initialData() {
-    const fetchRecords = await fetch('/data/DATA.json');
+    const fetchRecords = await fetch('./data/DATA.json');
     const responseRecords = await fetchRecords.json();
     this._listStories = responseRecords.listStory;
     this._populateStoriesDataToCard(this._listStories);
