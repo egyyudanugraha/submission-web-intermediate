@@ -29,10 +29,6 @@ class BadgeRounded extends LitElement {
     }
   `;
 
-  constructor() {
-    super();
-  }
-
   render() {
     return html`
       <span class="${this.primary ? 'primary' : 'secondary'}">

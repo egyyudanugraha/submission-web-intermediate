@@ -1,6 +1,6 @@
 import { html } from 'lit';
-import LitWithoutShadowDom from './base/LitWithoutShadowDom';
 import { updateWhenLocaleChanges, msg } from '@lit/localize';
+import LitWithoutShadowDom from './base/LitWithoutShadowDom';
 
 class FootApp extends LitWithoutShadowDom {
   constructor() {

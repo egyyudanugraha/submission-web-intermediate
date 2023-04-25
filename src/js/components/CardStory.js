@@ -1,5 +1,5 @@
-import LitWithoutShadowDom from './base/LitWithoutShadowDom';
 import { html } from 'lit';
+import LitWithoutShadowDom from './base/LitWithoutShadowDom';
 
 class CardStory extends LitWithoutShadowDom {
   static properties = {
@@ -24,6 +24,7 @@ class CardStory extends LitWithoutShadowDom {
       reflect: true,
     },
   };
+
   constructor() {
     super();
 

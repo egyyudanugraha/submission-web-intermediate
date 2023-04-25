@@ -43,7 +43,9 @@ class TextareaValidate extends LitWithoutShadowDom {
         rows=${this.rows || nothing}
         value=${this.value || nothing}
         ?required=${this.required}
-        @input=${(e) => (this.value = e.target.value)}
+        @input=${(e) => {
+          this.value = e.target.value;
+        }}
       ></textarea>
 
       ${this._validFeedbackTemplate()}

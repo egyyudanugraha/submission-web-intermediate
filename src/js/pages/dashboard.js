@@ -13,9 +13,7 @@ const Dashboard = {
 
   _populateStoriesDataToCard(stories = []) {
     if (!(typeof stories === 'object')) {
-      throw new Error(
-        `Parameter responseRecords should be an object. The value is ${transactionsHistory}`,
-      );
+      throw new Error(`Parameter responseRecords should be an object. The value is ${stories}`);
     }
 
     if (!Array.isArray(stories)) {
@@ -43,7 +41,7 @@ const Dashboard = {
   _cardPreloader(manyCard) {
     let placeholderCards = '';
 
-    for (let i = 0; i < manyCard; i++) {
+    for (let i = 0; i < manyCard; i += 1) {
       placeholderCards += `
       <div class="col my-2">
         <card-story placeholder></card-story>

@@ -1,6 +1,6 @@
-import LitWithoutShadowDom from './base/LitWithoutShadowDom';
 import { html } from 'lit';
 import { updateWhenLocaleChanges, msg } from '@lit/localize';
+import LitWithoutShadowDom from './base/LitWithoutShadowDom';
 
 class NavApp extends LitWithoutShadowDom {
   static properties = {
@@ -13,6 +13,7 @@ class NavApp extends LitWithoutShadowDom {
       reflect: true,
     },
   };
+
   constructor() {
     super();
     this._checkProperty();

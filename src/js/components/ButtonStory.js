@@ -1,6 +1,6 @@
-import LitWithoutShadowDom from './base/LitWithoutShadowDom';
 import { html } from 'lit';
 import { updateWhenLocaleChanges, msg } from '@lit/localize';
+import LitWithoutShadowDom from './base/LitWithoutShadowDom';
 
 class ButtonStory extends LitWithoutShadowDom {
   static properties = {

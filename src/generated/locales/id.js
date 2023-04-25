@@ -1,10 +1,4 @@
-// Do not modify this file by hand!
-// Re-generate this file by running lit-localize
-
-/* eslint-disable no-irregular-whitespace */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
-export const templates = {
+const templates = {
   s08a64b07b54df8d4: `oleh`,
   s11f6abf2fdde27ad: `Dibuat dengan`,
   s18c61ee29243b363: `hari yang lalu`,
@@ -14,3 +8,5 @@ export const templates = {
   sbcd76e32508a79e0: `detik yang lalu`,
   sffad8314c7d71c3d: `jam yang lalu`,
 };
+
+export default templates;
