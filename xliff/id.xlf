@@ -42,6 +42,18 @@
   <source>Logout</source>
   <target>Keluar</target>
 </trans-unit>
+<trans-unit id="s5e8250fb85d64c23">
+  <source>Close</source>
+  <target>Tutup</target>
+</trans-unit>
+<trans-unit id="see2fcaedf9743ec6">
+  <source>Location</source>
+  <target>Lokasi</target>
+</trans-unit>
+<trans-unit id="s63d894b1ddb06289">
+  <source>Description</source>
+  <target>Deskripsi</target>
+</trans-unit>
 </body>
 </file>
 </xliff>
