@@ -1,4 +1,5 @@
 import { html } from 'lit';
+import { msg } from '@lit/localize';
 import LitWithoutShadowDom from './base/LitWithoutShadowDom';
 
 class ModalStory extends LitWithoutShadowDom {
@@ -8,6 +9,10 @@ class ModalStory extends LitWithoutShadowDom {
       reflect: true,
     },
     location: {
+      type: String,
+      reflect: true,
+    },
+    date: {
       type: String,
       reflect: true,
     },
@@ -30,6 +35,7 @@ class ModalStory extends LitWithoutShadowDom {
 
     this.title = '';
     this.location = '';
+    this.date = '';
     this.description = '';
     this.imageUrl = '';
     this.placeholder = false;
@@ -38,7 +44,7 @@ class ModalStory extends LitWithoutShadowDom {
   render() {
     if (this.placeholder) {
       return html`
-        <div class="modal-dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" aria-hidden="true">
           <div class="modal-content">
             <div class="modal-header placeholder-glow">
               <h5 class="modal-title placeholder w-50"></h5>
@@ -69,7 +75,9 @@ class ModalStory extends LitWithoutShadowDom {
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                ${msg('Close')}
+              </button>
             </div>
           </div>
         </div>
@@ -77,7 +85,7 @@ class ModalStory extends LitWithoutShadowDom {
     }
 
     return html`
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">${this.title}</h5>
@@ -88,15 +96,19 @@ class ModalStory extends LitWithoutShadowDom {
                 <img id="detailImage" src=${this.imageUrl} class="img-fluid" />
               </div>
               <div class="col">
-                <h5>Location</h5>
+                <h5>${msg('Location')}</h5>
                 <p>${this.location}</p>
-                <h5>Description</h5>
+                <date-format posted="${this.date}"></date-format>
+                <hr />
+                <h5>${msg('Description')}</h5>
                 <p>${this.description}</p>
               </div>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              ${msg('Close')}
+            </button>
           </div>
         </div>
       </div>

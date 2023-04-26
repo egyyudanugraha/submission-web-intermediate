@@ -29,9 +29,6 @@ const Dashboard = {
       const detailStory = await Story.detailStory(triggerModal.dataset.recordId);
       this._populateStoryToModal(detailStory);
     });
-    recordDetailModal.addEventListener('hidden.bs.modal', () => {
-      this._removeStoryFromModal();
-    });
   },
 
   _populateStoriesDataToCard(stories = []) {
@@ -85,16 +82,9 @@ const Dashboard = {
     modal.removeAttribute('placeholder');
     modal.setAttribute('title', story.name);
     modal.setAttribute('location', story.location);
+    modal.setAttribute('date', story.createdAt);
     modal.setAttribute('description', story.description);
     modal.setAttribute('imageUrl', story.photoUrl);
-  },
-
-  _removeStoryFromModal() {
-    const { title, location, description, image } = this._getSelectorModal();
-    title.innerHTML = 'Title';
-    location.innerHTML = 'Location';
-    description.innerHTML = 'Description';
-    image.src = '';
   },
 
   _showPleaseLogin() {
