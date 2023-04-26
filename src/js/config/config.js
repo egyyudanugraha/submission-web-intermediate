@@ -7,6 +7,7 @@ const path = {
   DETAIL_STORY: (id) => `stories/${id}`,
   KEY_TOKEN: 'user-token',
   KEY_NAME: 'username',
+  API_KEY_GEOCODING: '83046384d6a344a7a819340113f69867',
 };
 
 const axiosConfig = {

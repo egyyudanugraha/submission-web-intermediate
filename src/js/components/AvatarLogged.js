@@ -19,7 +19,7 @@ class AvatarLogged extends LitWithoutShadowDom {
 
   render() {
     if (!Auth.getToken()) {
-      return html`<a href="login.html" class="link-darkblue">Masuk</a>`;
+      return html`<a href="login.html" class="link-darkblue">${msg('Login')}</a>`;
     }
     return html`
       <div class="dropdown">
@@ -38,7 +38,7 @@ class AvatarLogged extends LitWithoutShadowDom {
           />
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#" @click=${this._userLogOut}>${msg('Keluar')}</a></li>
+          <li><a class="dropdown-item" href="#" @click=${this._userLogOut}>${msg('Logout')}</a></li>
         </ul>
       </div>
     `;

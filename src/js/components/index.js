@@ -6,6 +6,7 @@ import './FootApp';
 import './LocalePicker';
 import './ButtonStory';
 import './AvatarLogged';
+import './ModalStory';
 import './form/TextareaValidate';
 import './form/InputValidate';
 import './form/InputImagePreview';
