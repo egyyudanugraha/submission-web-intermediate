@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title><%= htmlWebpackPlugin.options.title %> | Story App</title>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <main class="flex-grow-1">
+      <div class="main-content">
+        <div class="container py-5 centered">
+          <div class="card" id="customCard">
+            <div class="card-body">
+              <h1 class="text-center"><%= htmlWebpackPlugin.options.title %></h1>
+              <form id="registerForm" class="row row-cols-1 gap-3" novalidate>
+                <div class="col">
+                  <input-validate
+                    for="Nama"
+                    inputId="inputNama"
+                    invalidFeedbackMessage="Nama wajib diisi"
+                    required
+                  ></input-validate>
+                </div>
+                <div class="col">
+                  <input-validate
+                    for="Email"
+                    type="email"
+                    inputId="inputEmail"
+                    invalidFeedbackMessage="Email wajib diisi"
+                    required
+                  ></input-validate>
+                </div>
+                <div class="col">
+                  <input-validate
+                    for="Password"
+                    type="password"
+                    inputId="inputPassword"
+                    invalidFeedbackMessage="Password wajib diisi"
+                    required
+                  ></input-validate>
+                  <button class="btn btn-darkblue w-100 mt-3" type="submit">Daftar</button>
+                </div>
+                <div class="col d-flex justify-content-center">
+                  <span>Sudah punya akun? <a href="login.html" class="link-primary">Login</a></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <foot-app></foot-app>
+    </footer>
+  </body>
+</html>
