@@ -39,6 +39,7 @@ class NavApp extends LitWithoutShadowDom {
             >
               ${msg(`Add story`)}
             </a>
+            <avatar-logged></avatar-logged>
             <locale-picker></locale-picker>
           </div>
         </div>
