@@ -3,6 +3,10 @@ import LitWithoutShadowDom from './base/LitWithoutShadowDom';
 
 class CardStory extends LitWithoutShadowDom {
   static properties = {
+    id: {
+      type: String,
+      reflect: true,
+    },
     name: {
       type: String,
       reflect: true,
@@ -28,6 +32,7 @@ class CardStory extends LitWithoutShadowDom {
   constructor() {
     super();
 
+    this.id = '';
     this.name = '';
     this.description = '';
     this.date = '';
@@ -74,7 +79,14 @@ class CardStory extends LitWithoutShadowDom {
       <div class="card shadow">
         <img src="${this.image}" class="card-img-top skeleton-img" />
         <div class="card-body">
-          <h5 class="card-title">${this.name}</h5>
+          <a
+            href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#recordDetailModal"
+            data-record-id="${this.id}"
+            class="card-title link-darkblue fw-bold text-decoration-none"
+            >${this.name}</a
+          >
           <p class="card-text">${this.description}</p>
           <date-format posted="${this.date}"></date-format>
         </div>
